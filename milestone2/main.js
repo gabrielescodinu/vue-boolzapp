@@ -11,6 +11,7 @@ let root = new Vue ({
         name: 'Michele',
         avatar: 'img/avatar_1.jpg',
         visible: true,
+        lastLogin: "15:30:55",
         messages: [
         {
         date: '10/01/2020 15:30:55',
@@ -28,11 +29,14 @@ let root = new Vue ({
         status: 'received'
         }
         ],
+        userMessage: [
+        ],
       },
       {
         name: 'Fabio',
         avatar: 'img/avatar_2.jpg',
         visible: true,
+        lastLogin: "16:30:55",
         messages: [
         {
         date: '20/03/2020 16:30:00',
@@ -50,11 +54,14 @@ let root = new Vue ({
         status: 'sent'
         }
         ],
+        userMessage: [
+        ],
       },
       {
         name: 'Samuele',
         avatar: 'img/avatar_3.jpg',
         visible: true,
+        lastLogin: "17:30:55",
         messages: [
           {
           date: '28/03/2020 10:10:40',
@@ -72,18 +79,39 @@ let root = new Vue ({
           status: 'received'
           }
         ],
+        userMessage: [
+        ],
 },
-    ],
-    lista: [
     ],
     contactActive: {
       name: "Michele",
       avatar: 'img/avatar_1.jpg',
+      visible: true,
+      lastLogin: "15:30:55",
+      messages: [
+      {
+      date: '10/01/2020 15:30:55',
+      text: 'Hai portato a spasso il cane?',
+      status: 'sent'
+      },
+      {
+      date: '10/01/2020 15:50:00',
+      text: 'Ricordati di dargli da mangiare',
+      status: 'sent'
+      },
+      {
+      date: '10/01/2020 16:15:22',
+      text: 'Tutto fatto!',
+      status: 'received'
+      }
+      ],
+      userMessage: [
+      ],
     },
   },
   methods: {
     add(){
-      this.lista.push(this.testo);
+      this.contactActive.userMessage.push(this.testo);
       this.testo = "";
     },
     changeChat(index){

@@ -31,16 +31,15 @@ body i:hover {
   background: rgb(234,234,234);
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .topMenuLeft img {
   width: 70px;
   height: 70px;
-  margin-top: 15px;
   margin-left: 15px;
   border-radius: 50px;
 }
 .topMenuLeft h2 {
-  margin-top: 35px;
   margin-left: 20px;
   max-width: 50px;
 }
@@ -48,7 +47,6 @@ body i:hover {
   margin-left: 35%;
 }
 .topMenuLeft i {
-  margin-top: 35px;
   margin-left: 10px;
   font-size: 30px;
   color: grey;
@@ -61,22 +59,22 @@ body i:hover {
   margin-left: 1px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .topMenuRight img {
   width: 70px;
   height: 70px;
-  margin-top: 15px;
   margin-left: 15px;
   border-radius: 50px;
 }
 .topMenuRightInfo {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
 }
 .topMenuRight h2 {
+  align-self: flex-start;
   line-height: 0px;
-  margin-top: 35px;
   margin-left: 20px;
 }
 .topMenuRight p {
@@ -84,10 +82,9 @@ body i:hover {
   margin-left: 20px;
 }
 .topMenuRightIcons {
-  margin-left: 65%;
+  margin-left: 60%;
 }
 .topMenuRight i {
-  margin-top: 35px;
   margin-left: 10px;
   font-size: 30px;
   color: grey;
@@ -106,12 +103,11 @@ body i:hover {
   background: rgb(142,218,252);
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .notification i {
   font-size: 30px;
   color: rgb(142,218,252);
-  margin-top: 25px;
-  margin-bottom: 25px;
   margin-left: 25px;
   background: white;
   padding: 10px;
@@ -128,7 +124,6 @@ body i:hover {
   margin-left: 20px;
 }
 .notification h3 {
-  margin-top: 35px;
   line-height: 0px;
 }
 
@@ -139,13 +134,13 @@ body i:hover {
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .search input {
   padding: 10px;
   width: 100%;
   height: 60%;
   border: 0px;
+  outline: none;
 }
 .search i {
   margin: 20px;
@@ -172,7 +167,6 @@ body i:hover {
 .singlechat div {
   width: 100%;
   font-size: 20px;
-  font-weight: bold;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -191,21 +185,22 @@ body i:hover {
   align-items: center;
 }
 .fa-smile {
-  font-size: 50px;
+  font-size: 30px;
   margin-left: 20px;
   color: grey;
 }
 .bottomMenu input {
-  padding: 20px;
+  padding: 15px;
   margin-left: 20px;
-  width: 75%;
+  width: 80%;
   font-size: 20px;
   border: none;
   border-radius: 5px;
+  outline: none;
 }
 .fa-microphone{
-  font-size: 50px;
-  margin-left: 70px;
+  font-size: 30px;
+  margin-left: 50px;
   color: grey;
 }
 
@@ -215,6 +210,11 @@ body i:hover {
   background-image: url(img/mine.jpg);
   height: 500px;
   overflow-y: auto;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 .message li {
   list-style: none;
@@ -230,12 +230,22 @@ body i:hover {
   margin-left: 20px;
   width: 200px;
   border-radius: 5px;
+  align-self: flex-start;
 }
-.partnerMessage {
-  padding: 20px;
+.contactMessage {
+  padding: 0px 20px;
   margin-bottom: 10px;
   background: rgb(255,255,255);
-  margin-left: 20px;
+  margin-right: 20px;
   width: 200px;
   border-radius: 5px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.contactMessageDate {
+  font-size: 12px;
+  color: grey;
+  align-self: flex-end;
+
 }

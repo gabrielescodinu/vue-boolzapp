@@ -27,7 +27,7 @@
           <img :src="contactActive.avatar" alt="">
           <div class="topMenuRightInfo">
             <h2>{{contactActive.name}}</h2>
-            <p>Ultimo accesso alle</p>
+            <p>Ultimo accesso alle <span>{{contactActive.lastLogin}}</span></p>
           </div>
           <div class="topMenuRightIcons">
             <a href="#"><i class="fas fa-search"></i></a>
@@ -40,14 +40,14 @@
       <!-- Side menu -->
       <div class="sideMenu">
         <div class="notification">
-          <i class="fas fa-bell-slash"></i>
+          <a href="#"><i class="fas fa-bell-slash"></i></a>
           <div>
             <h3>Ricevi notifiche di nuovi messaggi</h3>
             <a href="#">Attiva notifiche desktop</a>
           </div>
         </div>
         <div class="search">
-          <i class="fas fa-search"></i>
+          <a href="#"><i class="fas fa-search"></i></a>
           <input placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
         </div>
         <div class="chats">
@@ -63,10 +63,11 @@
       <!-- message -->
       <div class="messageContainer">
         <div class="message">
-          <div>
-            {{contactActive.messages}}
-            <div v-for="(listaElemento, index) in lista" class="userMessage">{{listaElemento}}</div>
+          <div v-for="(contactMessageElemento, index) in contactActive.messages" class="contactMessage">
+            <p>{{contactMessageElemento.text}}</p><p class="contactMessageDate">{{contactMessageElemento.date}}</p>
           </div>
+          <div v-for="(userMessageElemento, index) in contactActive.userMessage"
+          class="userMessage">{{userMessageElemento}}</div>
         </div>
       </div>
 
