@@ -50,18 +50,21 @@
           <input placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
         </div>
         <div class="chats">
-          <div v-on:click="seen = !seen" v-for="(usersElemento, index) in users" class="singlechat">
+          <a href="#"><div @click="changeChat(index)" v-bind:class="(index === contatoreChat) ? 'active' : '' " v-for="(usersElemento, index) in users" class="singlechat">
             <div>
-              <a href="#">{{usersElemento}}</a>
+              <img v-bind:src="avatar">
+              {{usersElemento}}
             </div>
-          </div>
+          </div></a>
         </div>
       </div>
 
       <!-- message -->
-      <div class="message">
-        <div>
-          <div v-if="seen" v-for="(listaElemento, index) in lista" class="userMessage"><a href="#"><i @click="remove(index)" class="fas fa-check"></i></a>{{listaElemento}}</div>
+      <div class="messageContainer">
+        <div class="message active">
+          <div>
+            <div v-for="(chatElemento, index) in chat" class="userMessage">{{chatElemento}}</div>
+          </div>
         </div>
       </div>
 

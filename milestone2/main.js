@@ -12,19 +12,29 @@ let root = new Vue ({
       "Samuele",
       "Lusia",
     ],
-    lista: [
-      "Test messaggio",
-      "Test messaggio",
+    avatar: [
+      "img/avatar_1.jpg",
     ],
-    seen: false,
+    contatoreChat: 0,
+    chat: [
+      "Test messaggio",
+      "Test messaggio 2",
+      "Test messaggio 3",
+    ],
   },
   methods: {
     add(){
-      this.lista.push(this.testo);
+      this.chat.push(this.testo);
       this.testo = "";
     },
-    showChat(){
-
+    // next() {
+    //   this.contatoreChat ++;
+    // },
+    // prev() {
+    //   this.contatoreChat --;
+    // },
+    changeChat (index){
+      this.contatoreChat = index;
     }
   }
 })

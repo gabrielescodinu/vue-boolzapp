@@ -152,15 +152,17 @@ a {
   margin: 10px;
 }
 .singlechat {
-  height: 50px;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .singlechat h3 {
-  padding: 20px;
+
 }
 .singlechat div {
   font-size: 20px;
   font-weight: bold;
-  padding: 30px;
 }
 
 /* bottom menu */
@@ -192,10 +194,16 @@ a {
 }
 
 /* message */
-.message {
+.messageContainer {
   margin-left: 25%;
   background-image: url(img/mine.jpg);
   height: 500px;
+}
+.message {
+  display: none;
+}
+.active {
+  display: inline-block;
 }
 .message li {
   list-style: none;
