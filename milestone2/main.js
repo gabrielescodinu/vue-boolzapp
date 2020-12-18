@@ -1,6 +1,6 @@
 // Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
 // messaggi relativi al contatto attivo all’interno del pannello della conversazione
-// ● Click sul contatto mostra la conversazione del contatto cliccato
+// Click sul contatto mostra la conversazione del contatto cliccato
 
 let root = new Vue ({
   el: "#root",
@@ -9,7 +9,7 @@ let root = new Vue ({
     contacts: [
       {
         name: 'Michele',
-        avatar: 'img/avatar_2.jpg',
+        avatar: 'img/avatar_1.jpg',
         visible: true,
         messages: [
         {
@@ -31,7 +31,7 @@ let root = new Vue ({
       },
       {
         name: 'Fabio',
-        avatar: 'img/avatar_3.jpg',
+        avatar: 'img/avatar_2.jpg',
         visible: true,
         messages: [
         {
@@ -51,12 +51,34 @@ let root = new Vue ({
         }
         ],
       },
+      {
+        name: 'Samuele',
+        avatar: 'img/avatar_3.jpg',
+        visible: true,
+        messages: [
+          {
+          date: '28/03/2020 10:10:40',
+          text: 'La Marianna va in campagna',
+          status: 'received'
+          },
+          {
+          date: '28/03/2020 10:20:10',
+          text: 'Sicuro di non aver sbagliato chat?',
+          status: 'sent'
+          },
+          {
+          date: '28/03/2020 16:15:22',
+          text: 'Ah scusa!',
+          status: 'received'
+          }
+        ],
+},
     ],
     lista: [
     ],
     contactActive: {
-      name: "gabriele",
-      avatar: 'img/avatar_4.jpg',
+      name: "Michele",
+      avatar: 'img/avatar_1.jpg',
     },
   },
   methods: {

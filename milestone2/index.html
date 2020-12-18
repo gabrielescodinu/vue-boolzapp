@@ -9,35 +9,36 @@
   </head>
   <body>
     <div id="root">
+
       <!-- top menu -->
       <div class="topMenu">
-        <!-- top menu right -->
-        <div class="topMenuRight">
-          <img src="img/avatar_1.jpg" alt="">
-          <h2>Nome Utente</h2>
-          <div class="topMenuRightIcons">
-            <i class="fas fa-circle-notch"></i>
-            <i class="fas fa-comment-alt"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </div>
         <!-- top menu left -->
         <div class="topMenuLeft">
+          <img src="img/avatar_io.jpg" alt="">
+          <h2>Laura</h2>
+          <div class="topMenuLeftIcons">
+            <a href="#"><i class="fas fa-circle-notch"></i></a>
+            <a href="#"><i class="fas fa-comment-alt"></i></a>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+        </div>
+        <!-- top menu right -->
+        <div class="topMenuRight">
           <img :src="contactActive.avatar" alt="">
-          <div class="topMenuLeftInfo">
+          <div class="topMenuRightInfo">
             <h2>{{contactActive.name}}</h2>
             <p>Ultimo accesso alle</p>
           </div>
           <div class="topMenuRightIcons">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-paperclip"></i>
-            <i class="fas fa-ellipsis-v"></i>
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-paperclip"></i></a>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
           </div>
         </div>
       </div>
 
-      <!-- left menu -->
-      <div class="leftMenu">
+      <!-- Side menu -->
+      <div class="sideMenu">
         <div class="notification">
           <i class="fas fa-bell-slash"></i>
           <div>
@@ -71,9 +72,9 @@
 
       <!-- bottom menu -->
       <div class="bottomMenu">
-        <i class="far fa-smile"></i>
+        <a href="#"><i class="far fa-smile"></i></a>
         <input @keyup.enter="add" type="text" v-model="testo" placeholder="Scrivi un messaggio">
-        <i class="fas fa-microphone"></i>
+        <a href="#"><i class="fas fa-microphone"></i></a>
       </div>
     </div>
 

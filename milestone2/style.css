@@ -9,11 +9,15 @@ a {
   color: black;
   text-decoration: none;
 }
-.leftMenu {
-  height: 0px;
+#root {
+  width: 80%;
+  margin: auto;
+}
+body i:hover {
+  color: lightgrey;
 }
 
-/* top menu right */
+/* top menu left */
 .topMenu {
   height: 100px;
   width: 100%;
@@ -21,39 +25,10 @@ a {
   display: flex;
   flex-direction: row;
 }
-.topMenuRight {
-  height: 100px;
-  width: 25%;
-  background: rgb(234,234,234);
-  display: flex;
-  flex-direction: row;
-}
-.topMenuRight img {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  margin-left: 15px;
-  border-radius: 50px;
-}
-.topMenuRight h2 {
-  margin-top: 35px;
-  margin-left: 20px;
-}
-.topMenuRightIcons {
-  margin-left: 100px;
-}
-.topMenuRight i {
-  margin-top: 35px;
-  margin-left: 10px;
-  font-size: 30px;
-  color: grey;
-}
-
-/* top menu left */
 .topMenuLeft {
+  height: 100px;
+  width: 30%;
   background: rgb(234,234,234);
-  width: 75%;
-  margin-left: 1px;
   display: flex;
   flex-direction: row;
 }
@@ -64,22 +39,13 @@ a {
   margin-left: 15px;
   border-radius: 50px;
 }
-.topMenuLeftInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-}
 .topMenuLeft h2 {
-  line-height: 0px;
   margin-top: 35px;
   margin-left: 20px;
-}
-.topMenuLeft p {
-  line-height: 0px;
-  margin-left: 20px;
+  max-width: 50px;
 }
 .topMenuLeftIcons {
-  margin-left: 200px;
+  margin-left: 35%;
 }
 .topMenuLeft i {
   margin-top: 35px;
@@ -88,10 +54,54 @@ a {
   color: grey;
 }
 
+/* top menu right */
+.topMenuRight {
+  background: rgb(234,234,234);
+  width: 70%;
+  margin-left: 1px;
+  display: flex;
+  flex-direction: row;
+}
+.topMenuRight img {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  margin-left: 15px;
+  border-radius: 50px;
+}
+.topMenuRightInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.topMenuRight h2 {
+  line-height: 0px;
+  margin-top: 35px;
+  margin-left: 20px;
+}
+.topMenuRight p {
+  line-height: 0px;
+  margin-left: 20px;
+}
+.topMenuRightIcons {
+  margin-left: 65%;
+}
+.topMenuRight i {
+  margin-top: 35px;
+  margin-left: 10px;
+  font-size: 30px;
+  color: grey;
+}
+
+/* side menu */
+.sideMenu {
+  height: 0px;
+}
+
 /* notification */
 .notification {
   height: 100px;
-  width: 25%;
+  width: 30%;
   background: yellow;
   background: rgb(142,218,252);
   display: flex;
@@ -111,6 +121,9 @@ a {
   color: grey;
   line-height: 0px;
 }
+.notification a:hover {
+  color: lightgrey;
+}
 .notification div {
   margin-left: 20px;
 }
@@ -121,8 +134,8 @@ a {
 
 /* search */
 .search {
-  background: rgb(234,234,234);
-  width: 25%;
+  background: white;
+  width: 30%;
   height: 50px;
   display: flex;
   align-items: center;
@@ -144,7 +157,7 @@ a {
 .chats {
   background: rgb(344,334,234);
   height: 450px;
-  width: 25%;
+  width: 30%;
   overflow-y: auto;
 }
 .chats img {
@@ -156,17 +169,23 @@ a {
   display: flex;
   flex-direction: row;
 }
-
 .singlechat div {
+  width: 100%;
   font-size: 20px;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.singlechat div:hover {
+  background: lightgrey;
 }
 
 /* bottom menu */
 .bottomMenu {
   background: rgb(243,238,234);
   height: 100px;
-  margin-left: 25%;
+  margin-left: 30%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -179,7 +198,7 @@ a {
 .bottomMenu input {
   padding: 20px;
   margin-left: 20px;
-  width: 80%;
+  width: 75%;
   font-size: 20px;
   border: none;
   border-radius: 5px;
@@ -192,7 +211,7 @@ a {
 
 /* message */
 .messageContainer {
-  margin-left: 25%;
+  margin-left: 30%;
   background-image: url(img/mine.jpg);
   height: 500px;
   overflow-y: auto;
