@@ -23,9 +23,9 @@
         </div>
         <!-- top menu left -->
         <div class="topMenuLeft">
-          <img src="img/avatar_1.jpg" alt="">
+          <img :src="contactActive.avatar" alt="">
           <div class="topMenuLeftInfo">
-            <h2>Nome Utente</h2>
+            <h2>{{contactActive.name}}</h2>
             <p>Ultimo accesso alle</p>
           </div>
           <div class="topMenuRightIcons">
@@ -36,8 +36,8 @@
         </div>
       </div>
 
-      <!-- right menu -->
-      <div class="rightMenu">
+      <!-- left menu -->
+      <div class="leftMenu">
         <div class="notification">
           <i class="fas fa-bell-slash"></i>
           <div>
@@ -50,7 +50,7 @@
           <input placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
         </div>
         <div class="chats">
-          <a href="#"><div @click="changeChat(index)" v-for="contactsElemento in contacts" class="singlechat">
+          <a href="#"><div @click="changeChat(index)" v-for="(contactsElemento, index) in contacts" class="singlechat">
             <div>
               <img :src="contactsElemento.avatar">
               {{contactsElemento.name}}
@@ -61,8 +61,9 @@
 
       <!-- message -->
       <div class="messageContainer">
-        <div class="message active">
+        <div class="message">
           <div>
+            {{contactActive.messages}}
             <div v-for="(listaElemento, index) in lista" class="userMessage">{{listaElemento}}</div>
           </div>
         </div>

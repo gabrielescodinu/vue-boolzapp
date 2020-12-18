@@ -9,7 +9,7 @@ a {
   color: black;
   text-decoration: none;
 }
-.rightMenu {
+.leftMenu {
   height: 0px;
 }
 
@@ -145,6 +145,7 @@ a {
   background: rgb(344,334,234);
   height: 450px;
   width: 25%;
+  overflow-y: auto;
 }
 .chats img {
   width: 50px;
@@ -152,14 +153,10 @@ a {
   margin: 10px;
 }
 .singlechat {
-  border: 1px solid grey;
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
-.singlechat h3 {
 
-}
 .singlechat div {
   font-size: 20px;
   font-weight: bold;
@@ -198,12 +195,7 @@ a {
   margin-left: 25%;
   background-image: url(img/mine.jpg);
   height: 500px;
-}
-.message {
-  display: none;
-}
-.active {
-  display: inline-block;
+  overflow-y: auto;
 }
 .message li {
   list-style: none;

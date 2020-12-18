@@ -53,18 +53,19 @@ let root = new Vue ({
       },
     ],
     lista: [
-      "Test messaggio",
-      "Test messaggio",
     ],
-
+    contactActive: {
+      name: "gabriele",
+      avatar: 'img/avatar_4.jpg',
+    },
   },
   methods: {
     add(){
       this.lista.push(this.testo);
       this.testo = "";
     },
-    changeChat (index){
-      this.contatoreChat = index;
-    }
+    changeChat(index){
+      this.contactActive = this.contacts[index];
+    },
   }
 })
