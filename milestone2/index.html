@@ -50,10 +50,10 @@
           <input placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
         </div>
         <div class="chats">
-          <a href="#"><div @click="changeChat(index)" v-bind:class="(index === contatoreChat) ? 'active' : '' " v-for="(usersElemento, index) in users" class="singlechat">
+          <a href="#"><div @click="changeChat(index)" v-for="contactsElemento in contacts" class="singlechat">
             <div>
-              <img v-bind:src="avatar">
-              {{usersElemento}}
+              <img :src="contactsElemento.avatar">
+              {{contactsElemento.name}}
             </div>
           </div></a>
         </div>
@@ -63,7 +63,7 @@
       <div class="messageContainer">
         <div class="message active">
           <div>
-            <div v-for="(chatElemento, index) in chat" class="userMessage">{{chatElemento}}</div>
+            <div v-for="(listaElemento, index) in lista" class="userMessage">{{listaElemento}}</div>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
       <!-- bottom menu -->
       <div class="bottomMenu">
         <i class="far fa-smile"></i>
-        <input @keyup.enter= "add" type="text" v-model="testo" placeholder="Scrivi un messaggio">
+        <input @keyup.enter="add" type="text" v-model="testo" placeholder="Scrivi un messaggio">
         <i class="fas fa-microphone"></i>
       </div>
     </div>

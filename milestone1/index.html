@@ -50,25 +50,28 @@
           <input placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
         </div>
         <div class="chats">
-          <div v-for="(usersElemento, index) in users" class="singlechat">
+          <a href="#"><div @click="changeChat(index)" v-for="contactsElemento in contacts" class="singlechat">
             <div>
-              {{usersElemento}}
+              <img :src="contactsElemento.avatar">
+              {{contactsElemento.name}}
             </div>
-          </div>
+          </div></a>
         </div>
       </div>
 
       <!-- message -->
-      <div class="message">
-        <div>
-          <div v-for="(listaElemento, index) in lista" class="userMessage"><a href="#"><i @click="remove(index)" class="fas fa-check"></i></a>{{listaElemento}}</div>
+      <div class="messageContainer">
+        <div class="message active">
+          <div>
+            <div v-for="(listaElemento, index) in lista" class="userMessage">{{listaElemento}}</div>
+          </div>
         </div>
       </div>
 
       <!-- bottom menu -->
       <div class="bottomMenu">
         <i class="far fa-smile"></i>
-        <input @keyup.enter= "add" type="text" v-model="testo" placeholder="Scrivi un messaggio">
+        <input @keyup.enter="add" type="text" v-model="testo" placeholder="Scrivi un messaggio">
         <i class="fas fa-microphone"></i>
       </div>
     </div>
