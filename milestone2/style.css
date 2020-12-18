@@ -5,6 +5,10 @@ body {
   /* background: rgb(220,220,211); */
   background: rgb(0,150,136);
 }
+a {
+  color: black;
+  text-decoration: none;
+}
 .rightMenu {
   height: 0px;
 }
