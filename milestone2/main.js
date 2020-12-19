@@ -5,7 +5,13 @@
 let root = new Vue ({
   el: "#root",
   data: {
+    isActive: false,
     testo: "",
+    reply: {
+      date: '10/01/2020 15:30:55',
+      text: 'Ok',
+      status: 'sent'
+      },
     contacts: [
       {
         name: 'Michele',
@@ -113,6 +119,7 @@ let root = new Vue ({
     add(){
       this.contactActive.userMessage.push(this.testo);
       this.testo = "";
+      setTimeout(() => this.contactActive.messages.push(this.reply), 2000);
     },
     changeChat(index){
       this.contactActive = this.contacts[index];
