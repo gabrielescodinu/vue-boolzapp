@@ -12,6 +12,7 @@ a {
 #root {
   width: 80%;
   margin: auto;
+  margin-top: 50px;
 }
 body i:hover {
   color: lightgrey;

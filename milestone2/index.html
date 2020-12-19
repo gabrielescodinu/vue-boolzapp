@@ -63,7 +63,8 @@
       <!-- message -->
       <div class="messageContainer">
         <div class="message">
-          <div v-for="(contactMessageElemento, index) in contactActive.messages" class="contactMessage">
+          <div v-for="(contactMessageElemento, index) in contactActive.messages"
+          class="" v-bind:class="(contactMessageElemento.status === 'received') ? 'userMessage' : 'contactMessage'">
             <p>{{contactMessageElemento.text}}</p><p class="contactMessageDate">{{contactMessageElemento.date}}</p>
           </div>
           <div v-for="(userMessageElemento, index) in contactActive.userMessage"
