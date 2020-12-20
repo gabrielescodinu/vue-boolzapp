@@ -65,7 +65,7 @@
         <div class="message">
           <div v-for="(contactMessageElemento, index) in contactActive.messages" class="" v-bind:class="(contactMessageElemento.status === 'sent') ? 'userMessage' : 'contactMessage'" v-on:click="seen = !seen">
             <p>{{contactMessageElemento.text}}</p><p class="contactMessageDate">
-              {{contactMessageElemento.date}}<span v-if="seen" id="hide"><a @click="cancella" href="#"><i class="fas fa-trash-alt"></i></a></span>
+              {{contactMessageElemento.date}}<span v-if="seen" id="hide"><a href="#"><i @click="cancella" class="fas fa-trash-alt"></i></a></span>
             </p>
           </div>
           <div v-for="(userMessageElemento, index) in contactActive.userMessage" class="userMessage">
