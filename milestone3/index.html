@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link rel="stylesheet" href="style.css">
+      <title>Boolzapp</title>
+  </head>
+  <body>
+    <div id="root">
+
+      <!-- top menu -->
+      <div class="topMenu">
+        <!-- top menu left -->
+        <div class="topMenuLeft">
+          <img src="img/avatar_io.jpg" alt="">
+          <h2>Laura</h2>
+          <div class="topMenuLeftIcons">
+            <a href="#"><i class="fas fa-circle-notch"></i></a>
+            <a href="#"><i class="fas fa-comment-alt"></i></a>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+        </div>
+        <!-- top menu right -->
+        <div class="topMenuRight">
+          <img :src="contactActive.avatar" alt="">
+          <div class="topMenuRightInfo">
+            <h2>{{contactActive.name}}</h2>
+            <p>Ultimo accesso alle <span>{{contactActive.lastLogin}}</span></p>
+          </div>
+          <div class="topMenuRightIcons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-paperclip"></i></a>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side menu -->
+      <div class="sideMenu">
+        <div class="notification">
+          <a href="#"><i class="fas fa-bell-slash"></i></a>
+          <div>
+            <h3>Ricevi notifiche di nuovi messaggi</h3>
+            <a href="#">Attiva notifiche desktop</a>
+          </div>
+        </div>
+        <div class="search">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <input placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
+        </div>
+        <div class="chats">
+          <a href="#"><div @click="changeChat(index)" v-for="(contactsElemento, index) in contacts" class="singlechat">
+            <div>
+              <img :src="contactsElemento.avatar">
+              {{contactsElemento.name}}
+            </div>
+          </div></a>
+        </div>
+      </div>
+
+      <!-- message -->
+      <div class="messageContainer">
+        <div class="message">
+          <div v-for="(contactMessageElemento, index) in contactActive.messages" class="" v-bind:class="(contactMessageElemento.status === 'sent') ? 'userMessage' : 'contactMessage'" v-on:click="seen = !seen">
+            <p>{{contactMessageElemento.text}}</p><p class="contactMessageDate">
+              {{contactMessageElemento.date}}<span v-if="seen" id="hide"><a @click="cancella" href="#"><i class="fas fa-trash-alt"></i></a></span>
+            </p>
+          </div>
+          <div v-for="(userMessageElemento, index) in contactActive.userMessage" class="userMessage">
+            {{userMessageElemento}}
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom menu -->
+      <div class="bottomMenu">
+        <a href="#"><i class="far fa-smile"></i></a>
+        <input @keyup.enter="add" type="text" v-model="testo" placeholder="Scrivi un messaggio">
+        <a href="#"><i class="fas fa-microphone"></i></a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
