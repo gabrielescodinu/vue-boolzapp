@@ -136,7 +136,7 @@ let root = new Vue ({
     cancella(index){
       console.log(this.contactActive.messages[index]);
       this.contactActive.messages.splice(index, 1);
-      this.seen = false;
+      this.seen = true;
     },
   }
 })
