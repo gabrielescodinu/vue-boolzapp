@@ -10,7 +10,7 @@ let root = new Vue ({
     reply: {
       date: '10/01/2020 15:30:55',
       text: 'Ok',
-      status: 'sent'
+      status: 'received'
       },
     contacts: [
       {
@@ -114,6 +114,7 @@ let root = new Vue ({
       userMessage: [
       ],
     },
+    seen: false,
   },
   methods: {
     add(){
@@ -123,6 +124,11 @@ let root = new Vue ({
     },
     changeChat(index){
       this.contactActive = this.contacts[index];
+    },
+    cancella(index){
+      console.log(this.contactActive.messages[index]);
+      this.contactActive.messages.splice(index, 1);
+      this.seen = false;
     },
   }
 })

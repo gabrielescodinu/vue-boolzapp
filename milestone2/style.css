@@ -250,6 +250,14 @@ body i:hover {
 .contactMessageDate {
   font-size: 12px;
   color: grey;
-  align-self: flex-end;
+  align-self: flex-start;
 
+}
+
+#hide {
+  font-size: 20px;
+  margin-left: 40px;
+  width: 15px;
+  border-radius: 5px;
+  align-self: flex-end;
 }
