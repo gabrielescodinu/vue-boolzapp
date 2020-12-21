@@ -122,11 +122,11 @@ let root = new Vue ({
     testoRicerca: "",
   },
   computed: {
-    // ricerca() {
-    //   return this.contacts.filter(this.contacts.name => {
-    //     return this.contacts.title.includes(this.search.toLowerCase())
-    //   })
-    // }
+    ricerca() {
+      this.contacts.filter(this.contacts.name => {
+        return this.contacts.title.includes(this.search)
+      })
+    }
   },
   methods: {
     add(){
