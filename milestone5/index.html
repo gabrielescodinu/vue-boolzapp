@@ -52,7 +52,7 @@
         </div>
         <div class="chats">
           <a href="#"><div @click="changeChat(index)" v-for="(contactsElemento, index) in contacts" class="singlechat" v-if="contactsElemento.visible">
-            <div class="">
+            <div>
               <img :src="contactsElemento.avatar">
               <p>{{contactsElemento.name}}</p>
             </div>
