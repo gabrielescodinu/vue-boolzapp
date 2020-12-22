@@ -52,10 +52,11 @@
         </div>
         <div class="chats">
           <a href="#"><div @click="changeChat(index)" v-for="(contactsElemento, index) in contacts" class="singlechat" v-if="contactsElemento.visible">
-            <div>
+            <div class="">
               <img :src="contactsElemento.avatar">
-              {{contactsElemento.name}}
+              <p>{{contactsElemento.name}}</p>
             </div>
+            <p id="ultimoAccesso">{{contactsElemento.lastLogin}}</p>
           </div></a>
         </div>
       </div>
