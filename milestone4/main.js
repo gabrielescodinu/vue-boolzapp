@@ -5,6 +5,7 @@
 let root = new Vue ({
   el: "#root",
   data: {
+    search: "",
     isActive: false,
     testo: {
       date: '10/01/2020 15:30:55',
@@ -119,14 +120,6 @@ let root = new Vue ({
       ],
     },
     seen: false,
-    testoRicerca: "",
-  },
-  computed: {
-    ricerca() {
-      this.contacts.filter(this.contacts.name => {
-        return this.contacts.title.includes(this.search)
-      })
-    }
   },
   methods: {
     add(){
@@ -145,5 +138,12 @@ let root = new Vue ({
       this.contactActive.messages.splice(index, 1);
       this.seen = true;
     },
-  }
+  },
+  computed: {
+    filteredContact() {
+      return this.contacts.filter(contactsElemento => {
+        return contactsElemento.type.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
+      })
+    },
+  },
 })
